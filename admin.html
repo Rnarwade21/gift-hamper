@@ -1,0 +1,12 @@
+<h2>Admin Panel</h2>
+
+<form onsubmit="addProduct(event)">
+    <input id="pname" placeholder="Product Name" required>
+    <input id="pprice" placeholder="Price" required>
+    <button>Add Product</button>
+</form>
+
+<ul id="adminProducts"></ul>
+
+<script src="js/script.js"></script>
+<script>loadAdmin();</script>

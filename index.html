@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BunnyBox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>BunnyBox</h2>
+    <div>
+        <a href="login.html">Login</a>
+        <a href="#" onclick="openCart()">Cart</a>
+    </div>
+</div>
+
+<section class="products">
+    <h2>Gift Hampers</h2>
+
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('birthday')">Birthday</button>
+    <button onclick="filterProducts('festive')">Festive</button>
+
+    <div class="product-grid">
+        <div class="product-card birthday">
+            <h3>Birthday Bliss Box</h3>
+            <p>₹2499</p>
+            <button onclick="addToCart('Birthday Bliss Box',2499)">Add</button>
+        </div>
+
+        <div class="product-card festive">
+            <h3>Festive Glow Box</h3>
+            <p>₹3199</p>
+            <button onclick="addToCart('Festive Glow Box',3199)">Add</button>
+        </div>
+    </div>
+</section>
+
+<!-- CART MODAL -->
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <h3>Your Cart</h3>
+        <ul id="cartItems"></ul>
+        <h4 id="cartTotal"></h4>
+        <a href="cart.html" class="btn">View Cart</a>
+        <button onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
